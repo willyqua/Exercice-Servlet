@@ -25,12 +25,8 @@ public class Session extends HttpServlet {
 			throws ServletException,IOException {
 		
 		HttpSession session = request.getSession();		
-
-
-		Source: https://prograide.com/pregunta/28179/quotinstancierquot-une-liste-en-java 
-		
-		
-		
+		User user = new User();
+		Article articles = new Article();
 		
 		ServletOutputStream out = response.getOutputStream();
 		session.setAttribute("USER", user);

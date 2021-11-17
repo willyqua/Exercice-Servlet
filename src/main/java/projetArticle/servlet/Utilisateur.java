@@ -58,7 +58,9 @@ public class Utilisateur extends HttpServlet {
         	userInfo += "<h1>Informations utilisateur</h1>";
         	userInfo += "<p>UID : "+ user.getUID() + "</p>";
         	userInfo += "<p>Username : "+ user.getUsername() + "</p>";
-//        	userInfo += "<p>Age : "+ user.getAge() + "</p>";
+        	userInfo +="<p>Articles : "+ user.getArticles() + "</p>";
+        	userInfo +="<p>Email : "+ user.getEmail() + "</p>";
+        	userInfo +="<p>Role : "+ user.getRole() + "</p>";
         	userInfo += "<a href='logout'>Me deconnecter</a>";
         	request.setAttribute("userInfo", userInfo);
         }

@@ -1,4 +1,4 @@
-package servletProject;
+package projetArticle.servlet;
 
 import java.io.IOException;
 import java.util.Enumeration;
@@ -11,6 +11,7 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
+import projetArticle.model.User;
 @WebServlet("/userinfo")
 public class UserInfo extends HttpServlet {
 	
@@ -38,7 +39,9 @@ public class UserInfo extends HttpServlet {
 		out.println("<h1>Informations utilisateur</h1>");
 		out.println("<p>UID : "+ user.getUID() + "</p>");
 		out.println("<p>Username : "+ user.getUsername() + "</p>");
-		out.println("<p>Age : "+ user.getAge() + "</p>");
+		out.println("<p>Articles : "+ user.getArticles() + "</p>");
+		out.println("<p>Email : "+ user.getEmail() + "</p>");
+		out.println("<p>Role : "+ user.getRole() + "</p>");
 		out.println("<a href='logout'>Me deconnecter</a>");
 		out.println("</body>");
 		out.println("</html>");
